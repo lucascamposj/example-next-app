@@ -10,7 +10,6 @@ const Home = ({movies}) => {
   useEffect(() => {
     axios.get(`https://www.omdbapi.com/?apikey=${process.env.NEXT_PUBLIC_API_KEY}&s=Indiana%20Jones`)
     .then((response) => {
-      console.log(response.data)
       if(response.data?.Search){
         setOtherMovies(response.data.Search);
       }
