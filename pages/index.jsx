@@ -8,7 +8,7 @@ const Home = ({movies}) => {
   const [otherMovies, setOtherMovies] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://www.omdbapi.com/?apikey=${process.env.NEXT_PUBLIC_API_KEY}&s=Indiana%20Jones`)
+    axios.get(`https://www.omdbapi.com/?apikey=${process.env.NEXT_PUBLIC_API_KEY}&s=Indiana%20Jones`)
     .then((response) => {
       console.log(response.data)
       if(response.data?.Search){
@@ -27,7 +27,7 @@ const Home = ({movies}) => {
 
 export const getServerSideProps = async () => {
   try{
-    const response = await fetch(`http://www.omdbapi.com/?apikey=${process.env.API_KEY}&s=Star Wars`);
+    const response = await fetch(`https://www.omdbapi.com/?apikey=${process.env.API_KEY}&s=Star Wars`);
     const search = await response.json();
     const movies = search.Search;
 
