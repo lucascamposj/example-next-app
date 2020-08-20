@@ -9,8 +9,12 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "isomorphic-fetch": "^2.2.1",
     "next": "^9.5.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
   }
 }
