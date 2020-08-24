@@ -1,13 +1,15 @@
 import React from 'react';
 import "isomorphic-fetch";
+
 import MovieListItem from './MovieListItem';
+import {Container} from './styles';
 
 const MovieList = ({movies}) => (
-  <>
-  {movies.map((movie) => 
-    <MovieListItem key={movie.imdbID} movie={movie} />
-  )}
-  </>
+  <Container>
+    {movies.map((movie) => 
+      <MovieListItem key={movie.imdbID} movie={movie} />
+    )}
+  </Container>
 );
 
 export default MovieList;
