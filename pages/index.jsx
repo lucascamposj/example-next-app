@@ -24,7 +24,7 @@ const Home = ({movies}) => {
   )
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   try{
     const response = await fetch(`https://www.omdbapi.com/?apikey=${process.env.API_KEY}&s=Star Wars`);
     const search = await response.json();
